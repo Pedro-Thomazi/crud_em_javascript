@@ -1,0 +1,206 @@
+@import url('https://fonts.googleapis.com/css2?family=Open+Sans:wght@300;400;500;600;700;800&display=swap');
+
+
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+  font-family: 'Open Sans', sans-serif;
+  /* border: 1px solid red; */
+}
+
+body {
+  background-color: #aaa;
+}
+
+#header {
+  padding: 20px;
+  background-color: #00488b;
+  color: #fff;
+}
+
+#navbar {
+  display: flex;
+  align-items: center;
+  padding: 15px;
+  background-color: #003363;
+}
+
+#navbar div {
+  cursor: pointer;
+  color: goldenrod;
+  font-size: 1.2em;
+  margin-right: 10px;
+  width: 200px;
+  text-align: center;
+  border: 1px solid transparent;
+  padding: 10px;
+  transition: .4s;
+}
+
+#navbar div:hover {
+  border-color: goldenrod;
+}
+
+#navbar div:nth-child(1) {
+  background-color: goldenrod;
+  color: #1f1f1f;
+}
+
+#navbar div i {
+  margin-right: 10px;
+}
+
+#section {
+  max-width: 1000px;
+  margin: 10px auto;
+}
+
+#section .context {
+  width: 100%;
+  background-color: #fff;
+  box-shadow: 1px 1px 5px #0000006c;
+  margin-bottom: 30px;
+}
+
+#formEdit {
+  display: none;
+}
+
+.form {
+  display: flex;
+  flex-direction: column;
+  padding: 10px;
+}
+
+.form .inputs {
+  display: flex;
+  align-items: center;
+  margin-bottom: 20px;
+  font-size: 1.2em;
+}
+
+.form .inputs .formDivs {
+  display: flex;
+  flex-direction: column;
+  margin-right: 20px;
+}
+
+.form .inputs .formDivs input {
+  width: 300px;
+  margin-top: 5px;
+  font-size: 1em;
+  padding: 5px;
+  outline: none;
+}
+
+.form .btnsPost {
+  display: flex;
+  flex-direction: row;
+  justify-content: end;
+  width: 100%;
+}
+
+
+
+.btn {
+  cursor: pointer;
+  background-color: transparent;
+  border: 1px solid transparent;
+  width: 150px;
+  font-size: 1.2em;
+  padding: 5px;
+  margin: 5px;
+  transition: .4s;
+}
+
+.btn.btnSubmitForm {
+  background-color: #00488b;
+  color: #fff;
+}
+
+.btn.btnSubmitForm:hover {
+  background-color: transparent;
+  border-color: #00488b;
+  color: #00488b;
+}
+
+.btn.btnUpdateForm {
+  background-color: #8b6b00;
+  color: #fff;
+}
+
+.btn.btnUpdateForm:hover {
+  background-color: transparent;
+  border-color: #8b6b00;
+  color: #8b6b00;
+}
+
+.btn.btnCancel {
+  background-color: #8b1500;
+  color: #fff;
+}
+
+.btn.btnCancel:hover {
+  background-color: transparent;
+  border-color: #8b1500;
+  color: #8b1500;
+}
+
+
+.userTable {
+  width: 100%;
+  border-collapse: collapse;
+}
+
+.userTable thead {
+  background-color: #777;
+  color: #fff;
+}
+
+.userTable thead th {
+  padding: 5px;
+  text-align: start;
+}
+
+.userTable .id {
+  text-align: center;
+}
+
+.userTable thead th.btnsAction {
+  /* display: flex;
+  flex-direction: row; */
+  width: 120px;
+}
+
+.userTable th,
+.userTable td  {
+  border: 1px solid #000;
+}
+
+.userTable tbody td {
+  padding-left: 5px;
+}
+
+.userTable tbody td.btnsAction .btn {
+  width: 40px;
+  border-radius: 50%;
+}
+
+.userTable tbody td.btnsAction .btn.btnDelete {
+  color: #a70000;
+}
+
+.userTable tbody td.btnsAction .btn.btnDelete:hover{
+  color: #fff;
+  background-color: #a70000;
+}
+
+.userTable tbody td.btnsAction .btn.btnUpdate {
+  color: #4ba700;
+}
+
+.userTable tbody td.btnsAction .btn.btnUpdate:hover{
+  color: #fff;
+  background-color: #4ba700;
+}
