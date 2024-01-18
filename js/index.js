@@ -52,11 +52,12 @@ function addUser(nameValue, emailValue) {
 
 // Deletar
 function removeUser(id) {
-  confirm('Deseja mesmo DELETAR este usuário?')
-  for (let i = 0; i < allUsers.length; i++) {
-    if (allUsers[i].id == id) {
-      allUsers.splice(i, 1)
-      tbody.deleteRow(i)
+  if (confirm('Deseja mesmo DELETAR este usuário?')) {
+    for (let i = 0; i < allUsers.length; i++) {
+      if (allUsers[i].id == id) {
+        allUsers.splice(i, 1)
+        tbody.deleteRow(i)
+      }
     }
   }
 }
@@ -96,6 +97,7 @@ form.addEventListener("submit", (e) => {
 
   const name = document.querySelector('#name')
   const email = document.querySelector('#email')
+  const alertSuccess = document.querySelector('.alertSuccess')
 
   const nameValue = name.value
   const emailValue = email.value
@@ -106,6 +108,16 @@ form.addEventListener("submit", (e) => {
   }
 
   addUser(nameValue, emailValue)
+
+  alertSuccess.classList.add('open')
+
+  function closeAlertTimer(timer) {
+    setInterval(() => {
+      alertSuccess.classList.remove('open')
+    }, timer)
+  }
+
+  closeAlertTimer(5000)
 
   name.value = ''
   email.value = ''
@@ -127,4 +139,11 @@ btnCancel.addEventListener("click", () => {
 
   name.value = ''
   email.value = ''
+})
+
+// btn close alert
+const bi_x_lg = document.querySelector('.bi-x-lg')
+bi_x_lg.addEventListener('click', () => {
+  const alertSuccess = document.querySelector('.alertSuccess')
+  alertSuccess.classList.remove('open')
 })
