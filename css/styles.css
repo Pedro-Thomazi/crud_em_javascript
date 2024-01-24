@@ -174,7 +174,7 @@ body {
 }
 
 .userTable th,
-.userTable td  {
+.userTable td {
   border: 1px solid #000;
 }
 
@@ -191,7 +191,7 @@ body {
   color: #a70000;
 }
 
-.userTable tbody td.btnsAction .btn.btnDelete:hover{
+.userTable tbody td.btnsAction .btn.btnDelete:hover {
   color: #fff;
   background-color: #a70000;
 }
@@ -200,7 +200,7 @@ body {
   color: #4ba700;
 }
 
-.userTable tbody td.btnsAction .btn.btnUpdate:hover{
+.userTable tbody td.btnsAction .btn.btnUpdate:hover {
   color: #fff;
   background-color: #4ba700;
 }
@@ -251,4 +251,19 @@ body {
 
 .containerAlert .green {
   color: green;
+}
+
+@media (max-width: 630px) {
+  .form .inputs {
+    flex-direction: column;
+  }
+
+  .form .inputs .formDivs {
+    width: 100%;
+    margin: 20px;
+  }
+
+  .form .inputs .formDivs input {
+    width: 100%;
+  }
 }
